@@ -1,11 +1,5 @@
-# This example requires the 'message_content' intent.
-
 import discord
 from discord.ext import commands
-
-# Add this line to include the new "commands" directory
-from commands import *
-
 import os
 from dotenv import load_dotenv
 
@@ -13,12 +7,13 @@ description = '''A Discord bot that extracts data from server channels, fine-tun
 
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
+PREFIX = os.getenv('PREFIX')
 
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='!', description=description, intents=intents)
+bot = commands.Bot(command_prefix=PREFIX, description=description, intents=intents)
 
 @bot.event
 async def on_ready():
