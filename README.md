@@ -8,7 +8,7 @@ Follow these steps to set up the project:
 
 1. Clone the repository:
 
-```git clone https://github.com/your-username/your-repo.git```
+```git clone https://github.com/Sanguor/archives.git```
 
 2. Create a virtual environment in the project directory:
 
@@ -37,6 +37,11 @@ Follow these steps to set up the project:
 
 5. Run the project:
 
-```python my_bot.py```
+```python bot.py```
 
+OR 
+
+```npm i -g nodemon```
+
+```nodemon .\src\bot.py```
 Note: It's recommended to use Python 3.11.
