@@ -2,6 +2,10 @@
 
 import discord
 from discord.ext import commands
+
+# Add this line to include the new "commands" directory
+from commands import *
+
 import os
 from dotenv import load_dotenv
 
@@ -21,14 +25,17 @@ async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
     print('------')
 
-@bot.command()
-async def ping(ctx):
-    """Checks if bot is alive."""
-    await ctx.send('pong!')
+# Remove the import of the "commands" module if it exists
+bot.remove_command('ping')
+bot.remove_command('add')
 
-@bot.command(name='add')
-async def add(ctx, left: int, right: int):
-    """Adds two numbers together."""
-    await ctx.send(left + right)
+# Import the commands from the new files
+from commands.ping import ping
+from commands.add import add
+
+# Add the commands to the bot
+bot.add_command(ping)
+bot.add_command(add)
+
 
 bot.run(TOKEN)
