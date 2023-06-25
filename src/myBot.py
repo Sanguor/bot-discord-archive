@@ -23,14 +23,17 @@ async def on_ready():
 # Remove the import of the "commands" module if it exists
 bot.remove_command('ping')
 bot.remove_command('add')
+bot.remove_command('scan')
 
 # Import the commands from the new files
 from commands.ping import ping
 from commands.add import add
+from commands.scan import scan
 
 # Add the commands to the bot
 bot.add_command(ping)
 bot.add_command(add)
+bot.add_command(scan)
 
 
 bot.run(TOKEN)
