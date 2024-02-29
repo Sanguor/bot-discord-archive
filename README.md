@@ -1,6 +1,6 @@
 # archives
 
-Description of the project.
+Bot scanning and saving the content of a discord serveur
 
 ## Installation
 
