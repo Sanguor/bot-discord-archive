@@ -1,4 +1,4 @@
-# bot-discrod-archives
+# bot-discord-archives
 
 Bot scanning and saving the content of a discord serveur
 
